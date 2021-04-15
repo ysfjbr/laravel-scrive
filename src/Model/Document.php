@@ -1,5 +1,5 @@
 <?php
-namespace Dialect\Scrive\Model;
+namespace Gnm\Scrive\Model;
 
 use Illuminate\Support\Facades\File;
 use phpDocumentor\Reflection\DocBlock;

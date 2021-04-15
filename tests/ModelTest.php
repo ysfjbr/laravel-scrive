@@ -1,7 +1,7 @@
 <?php
-use Dialect\Scrive\Scrive;
-use \Dialect\Scrive\Model\Document;
-class ModelTest extends \Dialect\Scrive\TestCase
+use Gnm\Scrive\Scrive;
+use \Gnm\Scrive\Model\Document;
+class ModelTest extends \Gnm\Scrive\TestCase
 {
     /** @test */
     public function it_can_generate_headers(){

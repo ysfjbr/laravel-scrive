@@ -1,5 +1,5 @@
 <?php
-namespace Dialect\Scrive;
+namespace Gnm\Scrive;
 
 use Dialect\Scrive\Model\Document;
 

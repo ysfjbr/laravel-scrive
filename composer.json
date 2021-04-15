@@ -4,6 +4,7 @@
     "description": "API-wrapper for Scrive",
     "homepage": "https://github.com/dialect-katrineholm/scrive",
     "license": "MIT",
+    "version": "1.0.0",
     "authors": [
         {
             "name": "Dialect Katrineholm",

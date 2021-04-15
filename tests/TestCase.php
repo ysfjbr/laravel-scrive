@@ -1,6 +1,6 @@
 <?php
-namespace Dialect\Scrive;
-use Dialect\Scrive\ScriveServiceProvider;
+namespace Gnm\Scrive;
+use Gnm\Scrive\ScriveServiceProvider;
 use Illuminate\Foundation\Bootstrap\LoadEnvironmentVariables;
 
 class TestCase extends \Orchestra\Testbench\TestCase

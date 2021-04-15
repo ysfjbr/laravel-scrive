@@ -1,5 +1,5 @@
 <?php
-namespace Dialect\Scrive;
+namespace Gnm\Scrive;
 use Illuminate\Foundation\AliasLoader;
 use Illuminate\Support\ServiceProvider;
 class ScriveServiceProvider extends ServiceProvider

@@ -1,5 +1,5 @@
 <?php
-namespace Dialect\Scrive\Model;
+namespace Gnm\Scrive\Model;
 
 use GuzzleHttp\Client;
 

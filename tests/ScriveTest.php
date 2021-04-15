@@ -1,6 +1,6 @@
 <?php
-use Dialect\Scrive\Scrive;
-class ScriveTest extends \Dialect\Scrive\TestCase
+use Gnm\Scrive\Scrive;
+class ScriveTest extends \Gnm\Scrive\TestCase
 {
     /** @test */
     public function it_can_get_an_empty_document_model(){
