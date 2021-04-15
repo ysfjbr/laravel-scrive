@@ -1,14 +1,7 @@
 {
-    "name": "dialect-katrineholm/laravel-scrive",
+    "name": "gnm/laravel-scrive",
     "type": "library",
     "description": "API-wrapper for Scrive",
-    "keywords": [
-        "dialect",
-        "dialect-katrineholm",
-	"scrive",
-	"api",
-	"laravel"
-    ],
     "homepage": "https://github.com/dialect-katrineholm/scrive",
     "license": "MIT",
     "authors": [
@@ -17,6 +10,10 @@
             "email": "katrineholm@dialect.se",
             "homepage": "https://github.com/dialect-katrineholm",
             "role": "Developer"
+        },
+        {
+            "name": "Yousef Jaber",
+            "email": "yousef.jaber@groenewold-it.solutions"
         }
     ],
     "require-dev": {
@@ -24,18 +21,18 @@
     },
     "autoload": {
         "psr-4": {
-            "Dialect\\Scrive\\": "src"
+            "Gnm\\Scrive\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Dialect\\Scrive\\": "tests"
+            "Gnm\\Scrive\\": "tests"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Dialect\\Scrive\\ScriveServiceProvider"
+                "Gnm\\Scrive\\ScriveServiceProvider"
             ]
         }
     },
