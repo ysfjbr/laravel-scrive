@@ -26,7 +26,7 @@ class Model {
 
         return $this;
     }
-    
+
     protected function getHeaders() {
         $authString = 'oauth_signature_method="PLAINTEXT"';
         $authString .= ', oauth_consumer_key="'. $this->clientIdentifier.'"';
@@ -39,7 +39,7 @@ class Model {
     }
 
     protected function getApiUrl() {
-        if(config('scrive.developer_mode')) {
+        if(config('app.scrive.developer_mode')) {
             return 'https://api-testbed.scrive.com/api/v2/';
         }
 

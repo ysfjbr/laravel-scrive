@@ -34,6 +34,12 @@ class Document extends Model {
       return $this;
     }
 
+    public function createFromTemplate($temp_id) {
+        $this->data = $this->callApi('POST', 'documents/newfromtemplate/'.$temp_id);
+        $this->id = $this->data->id;
+        return $this;
+      }
+
     public function addParty($name, $email, $company = ""){
         if(!$this->data) {
             $this->get();
@@ -67,10 +73,50 @@ class Document extends Model {
             'contents' => json_encode(['parties' => $parties])
         ];
 
+        $this->data = $this->callApi('POST','documents/'.$this->id.'/update', $data);
+    }
+
+    public function update($partiesFields = [], $docData = []){
+        if(!$this->data) {
+            $this->get();
+        }
+
+        $data[] = [
+            'name' => 'document_id',
+            'contents' => $this->id
+        ];
+
+        //$parties = $this->data->parties;
+        /* $parties[0]->is_signatory = false;
+
+        foreach($partiesFields as $partyFields){
+            $party =  [
+                "is_signatory" => true ,
+                "fields" => $partyFields,
+                "sign_order" => 1,
+                "delivery_method" => "email",
+                "authentication_method_to_view" => "standard",
+                "authentication_method_to_sign" => "standard",
+                "confirmation_delivery_method" => "email"
+            ];
+            $parties[] = $party;
+        } */
+
+        /* $content = [];
+        $content['parties'] = $parties; */
+
+        foreach($docData as $key=> $val){
+            $content[$key] = $val;
+        }
+
+        $data[] = [
+            'name' => 'document',
+            'contents' => json_encode($content)
+        ];
 
         $this->data = $this->callApi('POST','documents/'.$this->id.'/update', $data);
     }
-    
+
     public function get() {
         $this->data = $this->callApi('GET', 'documents/'.$this->id.'/get');
         return $this;
@@ -102,7 +148,7 @@ class Document extends Model {
 
     }
 
-    
+
     public function file($id = 'main', $name = null) {
         if(!$this->id) {
             throw new \Exception('Invalid id '.$this->id);
